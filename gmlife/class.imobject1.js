@@ -1,33 +1,7 @@
-class Imobject1 {
-    constructor(x, y, index) {
-        this.x = x;
-        this.y = y;
-        this.index = index;
-        this.multiply = 0;
-        this.energy = 3;
-        this.directions = [
-            [this.x - 1, this.y - 1],
-            [this.x, this.y - 1],
-            [this.x - 1, this.y],
-            [this.x - 1, this.y + 1],
-            [this.x, this.y + 1],
-            [this.x, this.y + 1],
-            [this.x + 1, this.y + 1]
-
-        ];
-    }
-
-    getNewDirections() {
-        this.directions = [
-            [this.x - 1, this.y - 1],
-            [this.x, this.y - 1],
-            [this.x - 1, this.y],
-            [this.x - 1, this.y + 1],
-            [this.x, this.y + 1],
-            [this.x, this.y + 1],
-            [this.x + 1, this.y + 1]
-
-        ];
+class Imobject1 extends LivingCreature {
+    constructor(x, y) {
+        super(x, y);
+        this.energy = 2;
     }
 
     chooseCell(character, ch1, ch2) {
@@ -66,6 +40,7 @@ class Imobject1 {
         }
 
     }
+    
     mult() {
         this.energy += 1;
         var empty = random(this.chooseCell(0, 1))

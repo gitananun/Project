@@ -13,10 +13,36 @@
 </head>
 
 <body>
-        <style>
-                #legend {position: relative;top: 0;right: 0;width: 800px;} .legend-color {width: 30px;height: 30px;} td {border: 1px solid black; font-size: 14px; padding-left: 5px;}
-            </style>
-   <br>
+    <style>
+        #legend {
+            position: relative;
+            top: 0;
+            right: 0;
+            width: 800px;
+            transition: 0.2s;
+        }
+        #legend:hover{
+            box-shadow: 2px 5px 10px lightgrey;
+        }
+        .legend-color {
+            width: 45px;
+            height: 30px;
+            background: #c0ef60;
+        }
+
+        td {
+            border: 1px solid black;
+            font-size: 14px;
+            padding-left: 5px;
+        }
+
+        canvas {
+            position: relative;
+            top: -520px;
+            left: 62%;
+        }
+    </style>
+    <br>
     <table id="legend">
         <tr>
             <td class="legend-color">Գույն</td>
@@ -60,22 +86,24 @@
             <td>Սատկում է, երբ էներգիան փոքր է 1֊ից</td>
         </tr>
         <tr>
-                <td class="legend-color" style="background-color:black"></td>
-                <td>Գիշատիչ Ուտող</td>
-                <td>Մոտակա 8 վանդակներում, էներգիան քչանում է 1֊ով</td>
-                <td>Գիշատիչներին , մոտակա 8 վանդակներում, ուտելիս էներգիան ավելանում է 3֊ով</td>
-                <td>Բազմանում է մոտակա տարածքներում, երբ էներգիան 10֊ից ավել է</td>
-                <td>Սատկում է, երբ էներգիան փոքր է 2֊ից</td>
-            </tr>
-            <tr>
-                    <td class="legend-color" style="background-color:#003300"></td>
-                    <td>ուտում է գիշատիչներին,Գիշատիչ ուտողներին, ուտում է նաև խոտակերներին</td>
-                    <td>Մոտակա 8 վանդակներում, էներգիան քչանում է 1֊ով</td>
-                    <td>Գիշատիչ ուտողներին, գիշատիչներին և խոտակերներին, մոտակա 8 վանդակներում, ուտելիս էներգիան ավելանում է 3֊ով</td>
-                    <td>Բազմանում է մոտակա տարածքներում, երբ էներգիան 6֊ից ավել է</td>
-                    <td>Սատկում է, երբ էներգիան փոքր է 2֊ից</td>
-                </tr>
-    </table> <br> <br>
+            <td class="legend-color" style="background-color:black"></td>
+            <td>Գիշատիչ Ուտող</td>
+            <td>Մոտակա 8 վանդակներում, էներգիան քչանում է 1֊ով</td>
+            <td>Գիշատիչներին , մոտակա 8 վանդակներում, ուտելիս էներգիան ավելանում է 3֊ով</td>
+            <td>Բազմանում է մոտակա տարածքներում, երբ էներգիան 10֊ից ավել է</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 2֊ից</td>
+        </tr>
+        <tr>
+            <td class="legend-color" style="background-color:#003300"></td>
+            <td>ուտում է գիշատիչներին,Գիշատիչ ուտողներին, ուտում է նաև խոտակերներին</td>
+            <td>Մոտակա 8 վանդակներում, էներգիան քչանում է 1֊ով</td>
+            <td>Գիշատիչ ուտողներին, գիշատիչներին և խոտակերներին, մոտակա 8 վանդակներում, ուտելիս էներգիան ավելանում է
+                3֊ով</td>
+            <td>Բազմանում է մոտակա տարածքներում, երբ էներգիան 6֊ից ավել է</td>
+            <td>Սատկում է, երբ էներգիան փոքր է 2֊ից</td>
+        </tr>
+    </table> 
+    <br> <br>
 </body>
 
 </html>

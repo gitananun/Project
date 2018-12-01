@@ -1,50 +1,12 @@
-class Gishatich {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        this.multiply = 0;
-        this.energy = 5;
-        this.directions = [
-            [this.x - 1, this.y - 1],
-            [this.x, this.y - 1],
-            [this.x + 1, this.y - 1],
-            [this.x - 1, this.y],
-            [this.x + 1, this.y],
-            [this.x - 1, this.y + 1],
-            [this.x, this.y + 1],
-            [this.x + 1, this.y + 1]
-        ];
-    }
-
-    getNewDirections() {
-        this.directions = [
-            [this.x - 1, this.y - 1],
-            [this.x, this.y - 1],
-            [this.x + 1, this.y - 1],
-            [this.x - 1, this.y],
-            [this.x + 1, this.y],
-            [this.x - 1, this.y + 1],
-            [this.x, this.y + 1],
-            [this.x + 1, this.y + 1]
-        ];
-    }
-
-    chooseCell(character) {
-        this.getNewDirections()
-        var found = [];
-        for (var i in this.directions) {
-            var x = this.directions[i][0];
-            var y = this.directions[i][1];
-            if (x >= 0 && x < matrix[0].length && y >= 0 && y < matrix.length) {
-                if (matrix[y][x] == character) {
-                    found.push(this.directions[i]);
-                }
-
-            }
-
+class Gishatich extends LivingCreature{
+        constructor(x, y){
+            super(x, y);
+            this.energy = 10;
         }
-        return found;
-    }
+        chooseCell(character) {
+            this.getNewDirections();
+            return super.chooseCell(character);
+        }
 
     move() {
         var empty = random(this.chooseCell(1));
@@ -59,8 +21,9 @@ class Gishatich {
         }
 
     }
+    
     mult() {
-        this.energy++;
+        
         var empty = random(this.chooseCell(0))
         if (empty && this.energy > 8) {
             var newX = empty[0];
@@ -74,7 +37,7 @@ class Gishatich {
     eat() {
         var xotak = random(this.chooseCell(2));
         if (xotak) {
-            this.energy += 4;
+            this.energy += 5;
             var newX = xotak[0];
             var newY = xotak[1];
             matrix[newY][newX] = 3;

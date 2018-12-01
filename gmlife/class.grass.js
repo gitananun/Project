@@ -1,5 +1,4 @@
-class Grass extends LivingCreature{
-    
+class Grass extends LivingCreature {
 
     mult() {
         var empty = random(this.chooseCell(0))
