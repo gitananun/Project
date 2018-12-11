@@ -1,12 +1,14 @@
-class Gishatich extends LivingCreature{
-        constructor(x, y){
-            super(x, y);
-            this.energy = 10;
-        }
-        chooseCell(character) {
-            this.getNewDirections();
-            return super.chooseCell(character);
-        }
+var LivingCreature = require('./LivingCreature.js')
+
+module.exports = class Gishatich extends LivingCreature {
+    constructor(x, y) {
+        super(x, y);
+        this.energy = 10;
+    }
+    chooseCell(character) {
+        this.getNewDirections();
+        return super.chooseCell(character);
+    }
 
     move() {
         var empty = random(this.chooseCell(1));
@@ -21,9 +23,9 @@ class Gishatich extends LivingCreature{
         }
 
     }
-    
+
     mult() {
-        
+
         var empty = random(this.chooseCell(0))
         if (empty && this.energy > 8) {
             var newX = empty[0];

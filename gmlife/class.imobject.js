@@ -1,4 +1,5 @@
-class Imobject extends LivingCreature {
+var LivingCreature = require('./LivingCreature.js')
+module.exports = class Imobject extends LivingCreature {
     constructor(x, y) {
         super(x, y);
         this.energy = 4;
